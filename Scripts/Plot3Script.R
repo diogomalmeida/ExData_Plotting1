@@ -2,10 +2,9 @@
 dataset<-read.table(".//exdata_data_household_power_consumption//household_power_consumption.txt",sep = ";",header = FALSE,skip=66637,nrows=2880)
 
 # Plot 3
-plot(dataset$V7,xaxt = "n", ylab = "Energy sub metering", type = "l")
+plot(dataset$V7,xaxt = "n", ylab = "Energy sub metering",xlab = "", type = "l")
 lines(dataset$V8, col="red")
 lines(dataset$V9, col="blue")
-# Setting axes
 axis(1, at=0, labels="Thu")
 axis(1, at=1440, labels="Fri")
 axis(1, at=2880, labels="Sat")
